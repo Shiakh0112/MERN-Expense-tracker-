@@ -4,30 +4,51 @@
 
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900 font-sans dark:bg-gray-900 dark:text-gray-100;
+    @apply bg-gray-50 text-gray-900 font-sans transition-colors duration-200;
+  }
+  .dark body {
+    @apply bg-gray-950 text-gray-100;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary hover:bg-primaryDark text-white font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
   }
   .btn-secondary {
-    @apply bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium px-4 py-2 rounded-lg transition-colors dark:bg-gray-800 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700;
+    @apply bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 font-medium px-4 py-2 rounded-lg transition-colors
+           dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700;
   }
   .input {
-    @apply w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100;
+    @apply w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white text-gray-900
+           focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent
+           placeholder:text-gray-400
+           dark:bg-gray-800 dark:border-gray-700 dark:text-gray-100 dark:placeholder:text-gray-500
+           dark:focus:ring-indigo-400;
   }
   .card {
-    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-5 dark:bg-gray-800 dark:border-gray-700;
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-5
+           dark:bg-gray-800 dark:border-gray-700/60;
   }
   .badge-pending {
-    @apply bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full;
+    @apply bg-amber-100 text-amber-700 text-xs font-semibold px-2.5 py-0.5 rounded-full
+           dark:bg-amber-900/30 dark:text-amber-400;
   }
   .badge-approved {
-    @apply bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full;
+    @apply bg-emerald-100 text-emerald-700 text-xs font-semibold px-2.5 py-0.5 rounded-full
+           dark:bg-emerald-900/30 dark:text-emerald-400;
   }
   .badge-rejected {
-    @apply bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full;
+    @apply bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-0.5 rounded-full
+           dark:bg-red-900/30 dark:text-red-400;
+  }
+  .page-title {
+    @apply text-2xl font-bold text-gray-900 dark:text-white;
+  }
+  .page-subtitle {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+  }
+  .label {
+    @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1;
   }
 }

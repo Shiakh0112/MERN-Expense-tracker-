@@ -7,6 +7,9 @@ export default {
       colors: {
         primary: "#6366f1",
         primaryDark: "#4f46e5",
+        gray: {
+          950: "#0a0a0f",
+        },
       },
     },
   },

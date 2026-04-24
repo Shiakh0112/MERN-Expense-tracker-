@@ -22,55 +22,33 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 to-purple-50">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 px-4">
       <div className="w-full max-w-md">
-        <div className="card">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <MdAttachMoney size={32} className="text-primary" />
-            <h1 className="text-2xl font-bold text-gray-800">ExpenseTrack</h1>
+        <div className="card shadow-xl dark:shadow-gray-900/50">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <div className="p-2 bg-indigo-600 rounded-xl">
+              <MdAttachMoney size={28} className="text-white" />
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">ExpenseTrack</h1>
           </div>
-          <h2 className="text-lg font-semibold text-gray-700 mb-6 text-center">Create your account</h2>
+          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-6">Create your account</p>
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-              <input
-                type="text"
-                className="input"
-                placeholder="John Doe"
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                required
-              />
+              <label className="label">Full Name</label>
+              <input type="text" className="input" placeholder="John Doe" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input
-                type="email"
-                className="input"
-                placeholder="you@example.com"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                required
-              />
+              <label className="label">Email</label>
+              <input type="email" className="input" placeholder="you@example.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
-              <input
-                type="password"
-                className="input"
-                placeholder="Min 6 characters"
-                value={form.password}
-                onChange={(e) => setForm({ ...form, password: e.target.value })}
-                required
-              />
+              <label className="label">Password</label>
+              <input type="password" className="input" placeholder="Min 6 characters" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} required />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Role</label>
-              <select
-                className="input"
-                value={form.role}
-                onChange={(e) => setForm({ ...form, role: e.target.value })}
-              >
+              <label className="label">Role</label>
+              <select className="input" value={form.role} onChange={(e) => setForm({ ...form, role: e.target.value })}>
                 <option value="Member">Member</option>
                 <option value="Admin">Admin</option>
                 <option value="Viewer">Viewer</option>
@@ -80,9 +58,10 @@ export default function Register() {
               {loading ? "Creating account..." : "Create Account"}
             </button>
           </form>
-          <p className="text-center text-sm text-gray-500 mt-4">
+
+          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
             Already have an account?{" "}
-            <Link to="/login" className="text-primary font-medium hover:underline">Sign in</Link>
+            <Link to="/login" className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline">Sign in</Link>
           </p>
         </div>
       </div>
