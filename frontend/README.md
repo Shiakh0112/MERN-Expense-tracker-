@@ -4,6 +4,25 @@ A full-stack expense tracking application with role-based access control, real-t
 
 ---
 
+## 🔗 Live Demo
+
+| | URL |
+|---|---|
+| **Frontend** | https://mern-expense-tracker-two.vercel.app |
+| **Backend API** | https://mern-expense-tracker-chqc.onrender.com |
+
+---
+
+## 🔐 Demo Credentials
+
+| Role | Email | Password |
+|---|---|---|
+| **Admin** | khanashfaq9423@gmail.com | Shaik0112 |
+| **Member** | khatikashfaq992@gmail.com | Shaikh0112 |
+| **Viewer** | ashfaqkhatik5109@gmail.com | Shaikh0112 |
+
+---
+
 ## Tech Stack
 
 **Frontend**
@@ -173,6 +192,7 @@ exprence tracker/
     │   │   └── exportUtils.js
     │   ├── App.jsx
     │   └── main.jsx
+    ├── .env
     ├── vercel.json
     └── vite.config.js
 ```
@@ -206,6 +226,8 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 
+CLIENT_URL=http://localhost:5173,https://your-frontend.vercel.app
+
 EMAIL_USER=your_gmail@gmail.com
 EMAIL_PASS=your_gmail_app_password
 
@@ -221,6 +243,15 @@ npm run dev
 ```bash
 cd frontend
 npm install
+```
+
+Create `.env` file:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+```bash
 npm run dev
 ```
 
@@ -279,12 +310,14 @@ npm run dev
 2. Import in Vercel
 3. Build command: `npm run build`
 4. Output directory: `dist`
-5. `vercel.json` handles SPA routing automatically
+5. Add environment variable: `VITE_API_URL=https://your-backend.onrender.com/api`
+6. `vercel.json` handles SPA routing automatically
 
-### Backend — Render / Railway
+### Backend — Render
 1. Push `backend/` folder to GitHub
-2. Set all `.env` variables in platform dashboard
+2. Import in Render as Web Service
 3. Start command: `node server.js`
+4. Add all `.env` variables in Render dashboard
 
 ---
 

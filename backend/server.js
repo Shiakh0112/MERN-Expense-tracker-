@@ -17,7 +17,7 @@ connectDB();
 
 const app = express();
 
-const allowedOrigins = (process.env.CLIENT_URL || "http://localhost:5173").split(",");
+const allowedOrigins = (process.env.CLIENT_URL || "http://localhost:5173,https://mern-expense-tracker-two.vercel.app").split(",");
 app.use(cors({
   origin: (origin, cb) => cb(null, !origin || allowedOrigins.includes(origin)),
   credentials: true,
