@@ -10,6 +10,7 @@ A full-stack expense tracking application with role-based access control, real-t
 |---|---|
 | **Frontend** | https://mern-expense-tracker-two.vercel.app |
 | **Backend API** | https://mern-expense-tracker-chqc.onrender.com |
+| **Git Repo** | https://github.com/Shiakh0112/MERN-Expense-tracker- |
 
 ---
 
@@ -17,7 +18,7 @@ A full-stack expense tracking application with role-based access control, real-t
 
 | Role | Email | Password |
 |---|---|---|
-| **Admin** | khanashfaq9423@gmail.com | Shaik0112 |
+| **Admin** | khanashfaq9423@gmail.com | Shaikh0112 |
 | **Member** | khatikashfaq992@gmail.com | Shaikh0112 |
 | **Viewer** | ashfaqkhatik5109@gmail.com | Shaikh0112 |
 
